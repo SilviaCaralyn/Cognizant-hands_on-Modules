@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background-color: #f4f6f9;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: #1e3a8a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header nav {
+  margin-top: 10px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.course-card h2 {
+  margin-top: 0;
+}
+
+.course-card button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course-card button:hover {
+  background: #1d4ed8;
+}
+
+.student-profile {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.student-profile h2 {
+  margin-top: 0;
+}
+
+.student-profile input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+footer {
+  margin-top: 40px;
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

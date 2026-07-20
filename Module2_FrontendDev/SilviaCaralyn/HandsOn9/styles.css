@@ -1,0 +1,60 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f9;
+  color: #1a1a1a; /* #1a1a1a on #f7f7f9 = ~15.6:1 contrast, well above 4.5:1 */
+}
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem; background: #22314f; color: #fff; /* #fff on #22314f = 11.9:1 */
+}
+header nav ul { list-style: none; display: flex; gap: 1rem; }
+header nav a { color: #fff; text-decoration: underline; } /* underline aids non-color-based link identification */
+
+main { padding: 2rem; max-width: 1100px; margin: 0 auto; }
+
+#hero { text-align: center; padding: 3rem 1rem; }
+
+/* Step 134: fixed low-contrast button.
+   BEFORE: background #6b8cff, text #ffffff -> 3.1:1 (fails AA)
+   AFTER:  background #1d3f8f, text #ffffff -> 7.2:1 (passes AA) */
+.cta {
+  background: #1d3f8f;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.course-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Step 132: NEVER remove focus outlines without a replacement.
+   This visible focus ring is required for keyboard users. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.course-card:focus-visible {
+  outline: 3px solid #1d3f8f;
+  outline-offset: 2px;
+}
+
+form { display: flex; flex-direction: column; gap: 0.5rem; max-width: 320px; margin-top: 1rem; }
+label { font-weight: bold; }
+
+footer { text-align: center; padding: 1rem; color: #444; }
